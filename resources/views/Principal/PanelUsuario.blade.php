@@ -22,9 +22,9 @@
            </div>
            
            <div class="d-grid gap-2">
-            <a href="{{route('OpcionPacientes')}}" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Administrar pacientes</a>
-            <a href="{{route('OpcionMedico')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar medicos</a>
-            <a href="{{route('turnos')}}" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Turnos</a>
+            <a href="{{route('Paciente.index')}}" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Administrar pacientes</a>
+            {{-- <a href="{{route('OpcionMedico')}}" class="btn btn-info" tabindex="-1" role="button" aria-disabled="true">Administrar medicos</a>
+            <a href="{{route('turnos')}}" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Turnos</a> --}}
            
           </div>
         
