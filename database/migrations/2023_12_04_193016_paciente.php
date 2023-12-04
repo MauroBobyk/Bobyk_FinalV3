@@ -15,7 +15,7 @@ return new class extends Migration
             
             $paciente->string('nombre_apellido');
             $paciente->string('dni')->unique();
-            $paciente->integer('edad');
+            $paciente->string('edad');
             $paciente->string('telefono');
             $paciente->date('fecha_nacimiento');
             $paciente->timestamps();

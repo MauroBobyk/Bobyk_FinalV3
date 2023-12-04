@@ -23,8 +23,8 @@
                     <td>{{ $paciente->id }}</td>
                     <td>{{ $paciente->dni }}</td>
                     <td>{{ $paciente->edad }}</td>
-                    <td>$ {{ $paciente->telefono }}</td>
-                    <td>$ {{ $paciente->fecha_nacimiento}}</td>
+                    <td>{{ $paciente->telefono }}</td>
+                    <td>{{ $paciente->fecha_nacimiento}}</td>
                     </td>  
                 </tr>
             @endforeach
