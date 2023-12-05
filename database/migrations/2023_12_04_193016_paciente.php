@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pacientes', function (Blueprint $paciente) {
             
-            $paciente->string('nombre');
             $paciente->string('dni')->unique();
+            $paciente->string('nombre');
             $paciente->string('edad');
             $paciente->string('telefono');
             $paciente->date('fecha');

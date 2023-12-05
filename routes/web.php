@@ -16,7 +16,7 @@ Route::view('PanelUsuario',"Principal/PanelUsuario")->middleware('auth')->name('
 Route::get("/Pacientes/inicio",[PacienteController::class,"index"])->name("Paciente.index");
 Route::get("/Pacientes/carga",[PacienteController::class,"carga"])->name("Pacientes.carga");
 Route::POST("/Pacientes/store",[PacienteController::class,"store"])->name("Pacientes.store");
-
+Route::POST("/Pacientes/destroy",[PacienteController::class,"destroy"])->name("Pacientes.destroy");
 
 //login
 Route::post('/validar-registro', [LoginController::class,'register'])->name('validar-registro'); 

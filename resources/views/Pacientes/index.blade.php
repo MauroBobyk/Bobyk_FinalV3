@@ -11,8 +11,8 @@
 @if(sizeof($pacientes) > 0)
         <table class="table table-bordered">
             <tr>
-                <th>Nombre y apellido</th>
                 <th>Documento</th>
+                <th>Nombre y apellido</th> 
                 <th>Edad</th>
                 <th>telefono</th>
                 <th>Fecha de Nacimiento</th>
@@ -20,11 +20,22 @@
             </tr>
             @foreach ($pacientes as $paciente)
                 <tr>
-                    <td>{{ $paciente->nombre }}</td>
                     <td>{{ $paciente->dni }}</td>
+                    <td>{{ $paciente->nombre }}</td>
                     <td>{{ $paciente->edad }}</td>
                     <td>{{ $paciente->telefono }}</td>
                     <td>{{ $paciente->fecha}}</td>
+                    <td>
+                   {{--      <form action="{{ route('paciente.destroy',$pacientes->dni) }}" method="POST"> --}}
+
+                         {{--  <a class="btn btn-info" href="{{ route('productos.show',$producto->id) }}">Ver</a> --}}
+                            <a class="btn btn-primary" href="{{ route('productos.edit',$pacientes->dni) }}">Modificar</a>
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
                     </td>  
                 </tr>
             @endforeach
@@ -32,6 +43,6 @@
     @else
         <div class="alert alert-alert">Comenzar agregando a la Base de Datos.</div>
     @endif
-
+    {!! $pacientes->links() !!}
 
 @endsection
