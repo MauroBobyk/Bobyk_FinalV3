@@ -5,7 +5,7 @@
         <h2 class="text-center">Listado de pacientes</h2>
     </div>
     <div class="col-lg-12 text-center" style="margin-top:10px;margin-bottom: 10px;">
- {{--        <a class="btn btn-success " href="{{ route('productos.create') }}"> Agregar Pacientes</a> --}}
+<a class="btn btn-success " href="{{ route('Pacientes.carga') }}"> Agregar Pacientes</a>
     </div>
 </div>
 @if(sizeof($pacientes) > 0)
@@ -20,11 +20,11 @@
             </tr>
             @foreach ($pacientes as $paciente)
                 <tr>
-                    <td>{{ $paciente->id }}</td>
+                    <td>{{ $paciente->nombre }}</td>
                     <td>{{ $paciente->dni }}</td>
                     <td>{{ $paciente->edad }}</td>
                     <td>{{ $paciente->telefono }}</td>
-                    <td>{{ $paciente->fecha_nacimiento}}</td>
+                    <td>{{ $paciente->fecha}}</td>
                     </td>  
                 </tr>
             @endforeach

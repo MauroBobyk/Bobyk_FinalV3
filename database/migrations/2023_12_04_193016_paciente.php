@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('pacientes', function (Blueprint $paciente) {
             
-            $paciente->string('nombre_apellido');
+            $paciente->string('nombre');
             $paciente->string('dni')->unique();
             $paciente->string('edad');
             $paciente->string('telefono');
-            $paciente->date('fecha_nacimiento');
+            $paciente->date('fecha');
             $paciente->timestamps();
         });
     }

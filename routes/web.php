@@ -14,7 +14,8 @@ Route::view('register',"Login/register")->name('registro');
 //vista una vez entrado a la aplicacion
 Route::view('PanelUsuario',"Principal/PanelUsuario")->middleware('auth')->name('PanelUsuario');
 Route::get("/Pacientes/inicio",[PacienteController::class,"index"])->name("Paciente.index");
-
+Route::get("/Pacientes/carga",[PacienteController::class,"carga"])->name("Pacientes.carga");
+Route::POST("/Pacientes/store",[PacienteController::class,"store"])->name("Pacientes.store");
 
 
 //login
