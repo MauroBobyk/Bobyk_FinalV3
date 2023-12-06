@@ -30,8 +30,15 @@ public function carga(){
 
     public function edit(Paciente $pacientes)
     {
-        return view('Pacientes.edit',compact('paciente'));
+        return view('Pacientes.edit',compact('pacientes'));
     }
+
+    public function show(Paciente $pacientes)
+    {
+        return view('Pacientes.show',compact('pacientes'));
+    }
+
+
 
     public function update(Request $request, Paciente $pacientes)
     {

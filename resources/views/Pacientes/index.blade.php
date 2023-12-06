@@ -26,10 +26,10 @@
                     <td>{{ $paciente->telefono }}</td>
                     <td>{{ $paciente->fecha}}</td>
                     <td>
-                   {{--      <form action="{{ route('paciente.destroy',$pacientes->dni) }}" method="POST"> --}}
+               <form action="{{ route('Pacientes.destroy',$paciente->dni) }}" method="POST"> 
 
-                         {{--  <a class="btn btn-info" href="{{ route('productos.show',$producto->id) }}">Ver</a> --}}
-                            <a class="btn btn-primary" href="{{ route('productos.edit',$pacientes->dni) }}">Modificar</a>
+                       <a class="btn btn-info" href="{{ route('Pacientes.show',$paciente->dni) }}">Ver</a>
+                          <a class="btn btn-primary" href="{{ route('Pacientes.edit',$paciente->dni) }}">Modificar</a> 
 
                             @csrf
                             @method('DELETE')
