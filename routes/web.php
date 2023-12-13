@@ -14,12 +14,14 @@ Route::view('register',"Login/register")->name('registro');
 //vista una vez entrado a la aplicacion
 Route::view('PanelUsuario',"Principal/PanelUsuario")->middleware('auth')->name('PanelUsuario');
 
-Route::resource('Pacientes',PacienteController::class);
-
+Route::resource('/welcome',PacienteController::class);  
 Route::get("/Pacientes/inicio",[PacienteController::class,"index"])->name("Paciente.index");
 Route::get("/Pacientes/carga",[PacienteController::class,"carga"])->name("Pacientes.carga");
 Route::POST("/Pacientes/store",[PacienteController::class,"store"])->name("Pacientes.store");
-Route::POST("/Pacientes/edit{dni}",[PacienteController::class,"edit"])->name("Pacientes.edit");
+Route::GET("/Pacientes/edit",[PacienteController::class,"edit"])->name("Pacientes.edit");
+
+Route::post('/update', [PacienteController::class,'update'])->name('update'); 
+
 
 //login
 Route::post('/validar-registro', [LoginController::class,'register'])->name('validar-registro'); 

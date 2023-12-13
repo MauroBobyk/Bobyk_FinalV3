@@ -21,21 +21,15 @@
         </div>
     @endif
 
-    <form action="{{ route('Pacientes.update',$pacientes->dni) }}" method="POST">
+    <form action="{{ route('update',$pacientes->dni) }}" method="POST">
         @csrf
-        @method('PUT')
+        @method('POST')
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nombre y apellido:</strong>
                     <input type="text" name="nombre" class="form-control" placeholder="Nombre del Paciente">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>DNI:</strong>
-                    <input type="text" name="dni" class="form-control" placeholder="DNI del Paciente">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

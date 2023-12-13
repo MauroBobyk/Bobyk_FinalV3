@@ -44,7 +44,6 @@ public function carga(){
     {
         $request->validate([
             'nombre' => 'required',
-            'dni' => 'required',
             'edad' => 'required',
             'telefono' => 'required',
             'fecha' => 'required',
